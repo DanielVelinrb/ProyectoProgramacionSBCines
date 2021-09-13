@@ -16,6 +16,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     public GUICompraNormal compraNormal = new GUICompraNormal();
     public GUICompraAsistida compraAsistida = new GUICompraAsistida();
     public GUICompraEjecutiva compraEjecutiva = new GUICompraEjecutiva();
+    public GUIInformacion imprimirInformacion = new GUIInformacion();
     public Prueba p = new Prueba();
     
     public MenuPrincipal() {
@@ -24,6 +25,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         compraNormal.setVisible(false);
         compraAsistida.setVisible(false);
         compraEjecutiva.setVisible(false);
+        imprimirInformacion.setVisible(false);
         p.setVisible(false);
         
         for(int i = 0; i < 6; i++){
@@ -75,6 +77,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
 
         btnImprimirInformacion.setText("Imprimir Información");
+        btnImprimirInformacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnImprimirInformacionActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -125,6 +132,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
         //p.setVisible(true);
         compraEjecutiva.setVisible(true);
     }//GEN-LAST:event_btnSalaEjecutivaActionPerformed
+
+    private void btnImprimirInformacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirInformacionActionPerformed
+        // p.setVisible(true);
+        imprimirInformacion.setVisible(true);
+        
+    }//GEN-LAST:event_btnImprimirInformacionActionPerformed
 
     /**
      * @param args the command line arguments
