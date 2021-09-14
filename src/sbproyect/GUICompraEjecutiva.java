@@ -557,19 +557,18 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
             valorAlimentos += 7 * Integer.parseInt(txtCombo3.getText());
             if(txtCombo4.getText() != null)
             valorAlimentos += 4 * Integer.parseInt(txtCombo4.getText());
-               
-        
-        
+            
+            MenuPrincipal.compras.add(new CompraAfiliada(cmbHorarios.getSelectedIndex(), boletos, valorAlimentos));
+            boletos = 0;
+            valorAlimentos = 0;
+            cmbHorarios.setEnabled(true);
+            cmbHorarios.setSelectedIndex(-1);
+                    
         }catch(NumberFormatException nfe){
             JOptionPane.showMessageDialog(rootPane, "Debe ingresar números" +
                     "en los cuadros de texto","ERROR",JOptionPane.ERROR_MESSAGE);
-            }
-        
-        compra = new CompraAfiliada(1, boletos, valorAlimentos);
-        boletos = 0;
-        valorAlimentos = 0;
-        cmbHorarios.setEnabled(true);
-        cmbHorarios.setSelectedIndex(-1);
+        }
+       
     }//GEN-LAST:event_btnRegistrarCompraActionPerformed
 
     /**

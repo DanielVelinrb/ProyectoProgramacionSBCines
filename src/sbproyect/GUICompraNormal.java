@@ -28,7 +28,7 @@ public class GUICompraNormal extends javax.swing.JFrame {
         cmbFila = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
         lblNumeroSala = new javax.swing.JLabel();
-        cmbHorarioFuncion = new javax.swing.JComboBox<>();
+        cmbHorarios = new javax.swing.JComboBox<>();
         cmbNumeroSala = new javax.swing.JComboBox<>();
         lblHorarioFuncion = new javax.swing.JLabel();
         btnVerAsientos = new javax.swing.JButton();
@@ -55,8 +55,8 @@ public class GUICompraNormal extends javax.swing.JFrame {
 
         lblNumeroSala.setText("Sala:");
 
-        cmbHorarioFuncion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mañana: (10 am)", "Tarde: (4 pm)", "Noche: (10 pm)" }));
-        cmbHorarioFuncion.setSelectedIndex(-1);
+        cmbHorarios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mañana: (10 am)", "Tarde: (4 pm)", "Noche: (10 pm)" }));
+        cmbHorarios.setSelectedIndex(-1);
 
         cmbNumeroSala.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2" }));
         cmbNumeroSala.setSelectedIndex(-1);
@@ -81,7 +81,7 @@ public class GUICompraNormal extends javax.swing.JFrame {
                     .addComponent(lblNumeroSala))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cmbHorarioFuncion, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cmbHorarios, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cmbNumeroSala, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -99,7 +99,7 @@ public class GUICompraNormal extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblHorarioFuncion)
-                    .addComponent(cmbHorarioFuncion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cmbHorarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
                 .addComponent(btnVerAsientos)
                 .addGap(20, 20, 20))
@@ -187,10 +187,10 @@ public class GUICompraNormal extends javax.swing.JFrame {
         int fila = cmbFila.getSelectedIndex();
         int columna = cmbColumna.getSelectedIndex();
         int sala = cmbNumeroSala.getSelectedIndex();
-        int funcion = cmbHorarioFuncion.getSelectedIndex();
+        int funcion = cmbHorarios.getSelectedIndex();
         int posArray = sala + funcion;
         try{
-            if(cmbHorarioFuncion.getSelectedIndex() == 1){
+            if(cmbHorarios.getSelectedIndex() == 1){
                 posArray += 2;
             }
             if(MenuPrincipal.salasNormales[posArray].asientos[fila][columna + 1].equals("OCUPADO")){
@@ -202,8 +202,8 @@ public class GUICompraNormal extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(rootPane, "ASIENTO AGREGADO");
                 boletos++;
             }
-            if(cmbHorarioFuncion.isEnabled() && cmbNumeroSala.isEnabled())
-                cmbHorarioFuncion.setEnabled(false);
+            if(cmbHorarios.isEnabled() && cmbNumeroSala.isEnabled())
+                cmbHorarios.setEnabled(false);
                 cmbNumeroSala.setEnabled(false);
         }
         catch(ArrayIndexOutOfBoundsException error){
@@ -215,7 +215,7 @@ public class GUICompraNormal extends javax.swing.JFrame {
     private void btnVerAsientosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerAsientosActionPerformed
         datos.setRowCount(0);
         int sala = cmbNumeroSala.getSelectedIndex();
-        int funcion = cmbHorarioFuncion.getSelectedIndex();
+        int funcion = cmbHorarios.getSelectedIndex();
         int posArray = sala + funcion;
         if(sala == 0){
             for(int i=0 ; i < SalaNormal.getFILAS() ; i++)
@@ -228,11 +228,11 @@ public class GUICompraNormal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVerAsientosActionPerformed
 
     private void btnRegistrarCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarCompraActionPerformed
-        compra = new CompraNormal(1, boletos);
+        MenuPrincipal.compras.add(new CompraNormal(cmbHorarios.getSelectedIndex(), boletos));
         boletos = 0;
-        cmbHorarioFuncion.setEnabled(true);
+        cmbHorarios.setEnabled(true);
         cmbNumeroSala.setEnabled(true);
-        cmbHorarioFuncion.setSelectedIndex(-1);
+        cmbHorarios.setSelectedIndex(-1);
         cmbNumeroSala.setSelectedIndex(-1);
     }//GEN-LAST:event_btnRegistrarCompraActionPerformed
 
@@ -278,7 +278,7 @@ public class GUICompraNormal extends javax.swing.JFrame {
     private javax.swing.JButton btnVerAsientos;
     private javax.swing.JComboBox<String> cmbColumna;
     private javax.swing.JComboBox<String> cmbFila;
-    private javax.swing.JComboBox<String> cmbHorarioFuncion;
+    private javax.swing.JComboBox<String> cmbHorarios;
     private javax.swing.JComboBox<String> cmbNumeroSala;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

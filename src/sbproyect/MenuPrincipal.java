@@ -1,6 +1,7 @@
 package sbproyect;
 
 import java.awt.Label;
+import java.util.ArrayList;
 
 public class MenuPrincipal extends javax.swing.JFrame {
     //VARIABLES AUXILIARES QUE SERVIRAN PARA EL AJUSTO DE LOS ELEMENTOS
@@ -16,8 +17,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
     public GUICompraNormal compraNormal = new GUICompraNormal();
     public GUICompraAsistida compraAsistida = new GUICompraAsistida();
     public GUICompraEjecutiva compraEjecutiva = new GUICompraEjecutiva();
-    public GUIInformacion imprimirInformacion = new GUIInformacion();
+    public GUIInformacion informacion = new GUIInformacion();
+    //BORRAR EN PRÓXIMA VERSIONES
     public Prueba p = new Prueba();
+    
+    public static ArrayList<Compra> compras;
     
     public MenuPrincipal() {
         initComponents();
@@ -25,7 +29,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         compraNormal.setVisible(false);
         compraAsistida.setVisible(false);
         compraEjecutiva.setVisible(false);
-        imprimirInformacion.setVisible(false);
+        informacion.setVisible(false);
+        compras = new ArrayList();
         p.setVisible(false);
         
         for(int i = 0; i < 6; i++){
@@ -129,14 +134,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalaAsistidaActionPerformed
 
     private void btnSalaEjecutivaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalaEjecutivaActionPerformed
-        //p.setVisible(true);
         compraEjecutiva.setVisible(true);
     }//GEN-LAST:event_btnSalaEjecutivaActionPerformed
 
     private void btnImprimirInformacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirInformacionActionPerformed
-        // p.setVisible(true);
-        imprimirInformacion.setVisible(true);
-        
+        informacion.setVisible(true);
+        informacion.mostrarInformacion();
     }//GEN-LAST:event_btnImprimirInformacionActionPerformed
 
     /**
