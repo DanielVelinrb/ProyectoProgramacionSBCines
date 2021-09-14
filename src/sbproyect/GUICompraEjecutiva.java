@@ -28,47 +28,47 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
         lblHorarioFuncion = new javax.swing.JLabel();
         cmbHorarios = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        lblCanguilM = new javax.swing.JLabel();
+        lblCanguilG = new javax.swing.JLabel();
+        lblGaseosa = new javax.swing.JLabel();
+        lblHotDog = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         txtCanguilG = new javax.swing.JTextField();
         txtGaseosa = new javax.swing.JTextField();
         txtCanguilM = new javax.swing.JTextField();
         txtCombo3 = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
+        lblCombos = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
+        lblC1CanguilM = new javax.swing.JLabel();
+        lblC1Gaseosa = new javax.swing.JLabel();
+        lblC1Nachos = new javax.swing.JLabel();
+        lblPrecioCombo1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
+        lblC4Gaseosa = new javax.swing.JLabel();
+        lblC4HotDog = new javax.swing.JLabel();
+        lblC4Nachos = new javax.swing.JLabel();
+        lblPrecioCombo4 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        lblC2CanguilG = new javax.swing.JLabel();
+        lblC2Gaseosa = new javax.swing.JLabel();
+        lblC2HotDog = new javax.swing.JLabel();
+        lblPrecioCombo2 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        lblC3CanguilG = new javax.swing.JLabel();
+        lblC3HotDog = new javax.swing.JLabel();
+        lblC3Nachos = new javax.swing.JLabel();
+        lblPrecioCombo3 = new javax.swing.JLabel();
+        lblNachos = new javax.swing.JLabel();
         txtHotDog = new javax.swing.JTextField();
         txtNachos = new javax.swing.JTextField();
         txtCombo1 = new javax.swing.JTextField();
         txtCombo2 = new javax.swing.JTextField();
         txtCombo4 = new javax.swing.JTextField();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
+        lblPrecioCanguilG = new javax.swing.JLabel();
+        lblPrecioGaseosa = new javax.swing.JLabel();
+        lblPrecioHotDog = new javax.swing.JLabel();
+        lblPrecioNachos = new javax.swing.JLabel();
+        lblPrecioCanguilM = new javax.swing.JLabel();
         btnEscogerAsientos = new javax.swing.JButton();
         cmbFila = new javax.swing.JComboBox<>();
         cmbColumna = new javax.swing.JComboBox<>();
@@ -92,25 +92,25 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Alimentos"));
 
-        jLabel1.setText("Canguil Med.");
+        lblCanguilM.setText("Canguil Med.");
 
-        jLabel2.setText("Canguil Grande");
+        lblCanguilG.setText("Canguil Grande");
 
-        jLabel3.setText("Gaseosa");
+        lblGaseosa.setText("Gaseosa");
 
-        jLabel4.setText("Hot-Dog");
+        lblHotDog.setText("Hot-Dog");
 
-        jLabel7.setText("Combos");
+        lblCombos.setText("Combos");
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Combo 1"));
 
-        jLabel8.setText("Canguil Med.");
+        lblC1CanguilM.setText("Canguil Med.");
 
-        jLabel9.setText("Gaseosa");
+        lblC1Gaseosa.setText("Gaseosa");
 
-        jLabel10.setText("Nachos");
+        lblC1Nachos.setText("Nachos");
 
-        jLabel11.setText("5$");
+        lblPrecioCombo1.setText("5$");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -119,39 +119,39 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
+                    .addComponent(lblC1CanguilM)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblC1Gaseosa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
-                                .addComponent(jLabel11))
-                            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(lblPrecioCombo1))
+                            .addComponent(lblC1Nachos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel8)
+                .addComponent(lblC1CanguilM)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel9)
+                .addComponent(lblC1Gaseosa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel10)
+                .addComponent(lblC1Nachos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel11)
+                .addComponent(lblPrecioCombo1)
                 .addGap(0, 11, Short.MAX_VALUE))
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Combo 4"));
 
-        jLabel20.setText("Gaseosa");
+        lblC4Gaseosa.setText("Gaseosa");
 
-        jLabel21.setText("Hot-Dog");
+        lblC4HotDog.setText("Hot-Dog");
 
-        jLabel22.setText("Nachos");
+        lblC4Nachos.setText("Nachos");
 
-        jLabel23.setText("4$");
+        lblPrecioCombo4.setText("4$");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -162,34 +162,34 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jLabel23))
-                    .addComponent(jLabel22)
-                    .addComponent(jLabel21)
-                    .addComponent(jLabel20))
+                        .addComponent(lblPrecioCombo4))
+                    .addComponent(lblC4Nachos)
+                    .addComponent(lblC4HotDog)
+                    .addComponent(lblC4Gaseosa))
                 .addGap(25, 25, 25))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addComponent(jLabel20)
+                .addComponent(lblC4Gaseosa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel21)
+                .addComponent(lblC4HotDog)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel22)
+                .addComponent(lblC4Nachos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel23)
+                .addComponent(lblPrecioCombo4)
                 .addContainerGap())
         );
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Combo 2"));
 
-        jLabel12.setText("Canguil Grande");
+        lblC2CanguilG.setText("Canguil Grande");
 
-        jLabel13.setText("Gaseosa");
+        lblC2Gaseosa.setText("Gaseosa");
 
-        jLabel14.setText("Hot-Dog");
+        lblC2HotDog.setText("Hot-Dog");
 
-        jLabel15.setText("6$");
+        lblPrecioCombo2.setText("6$");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -199,39 +199,39 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel12)
+                        .addComponent(lblC2CanguilG)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
-                                .addComponent(jLabel15))
-                            .addComponent(jLabel14)
-                            .addComponent(jLabel13))
+                                .addComponent(lblPrecioCombo2))
+                            .addComponent(lblC2HotDog)
+                            .addComponent(lblC2Gaseosa))
                         .addGap(25, 25, 25))))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addComponent(jLabel12)
+                .addComponent(lblC2CanguilG)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel13)
+                .addComponent(lblC2Gaseosa)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel14)
+                .addComponent(lblC2HotDog)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel15)
+                .addComponent(lblPrecioCombo2)
                 .addGap(0, 11, Short.MAX_VALUE))
         );
 
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder("Combo 3"));
 
-        jLabel16.setText("Canguil Grande");
+        lblC3CanguilG.setText("Canguil Grande");
 
-        jLabel17.setText("Hot-Dog");
+        lblC3HotDog.setText("Hot-Dog");
 
-        jLabel18.setText("Nachos");
+        lblC3Nachos.setText("Nachos");
 
-        jLabel19.setText("7$");
+        lblPrecioCombo3.setText("7$");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -240,42 +240,42 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel16)
+                    .addComponent(lblC3CanguilG)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel17)
+                            .addComponent(lblC3HotDog)
                             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanel6Layout.createSequentialGroup()
                                     .addGap(10, 10, 10)
-                                    .addComponent(jLabel19))
-                                .addComponent(jLabel18)))))
+                                    .addComponent(lblPrecioCombo3))
+                                .addComponent(lblC3Nachos)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(jLabel16)
+                .addComponent(lblC3CanguilG)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel17)
+                .addComponent(lblC3HotDog)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel18)
+                .addComponent(lblC3Nachos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel19)
+                .addComponent(lblPrecioCombo3)
                 .addGap(0, 11, Short.MAX_VALUE))
         );
 
-        jLabel6.setText("Nachos");
+        lblNachos.setText("Nachos");
 
-        jLabel24.setText("4$");
+        lblPrecioCanguilG.setText("4$");
 
-        jLabel25.setText("1$");
+        lblPrecioGaseosa.setText("1$");
 
-        jLabel26.setText("2$");
+        lblPrecioHotDog.setText("2$");
 
-        jLabel27.setText("2$");
+        lblPrecioNachos.setText("2$");
 
-        jLabel28.setText("3$");
+        lblPrecioCanguilM.setText("3$");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -284,31 +284,31 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel6))
+                    .addComponent(lblCanguilM)
+                    .addComponent(lblCanguilG)
+                    .addComponent(lblGaseosa)
+                    .addComponent(lblHotDog)
+                    .addComponent(lblNachos))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel28)
+                        .addComponent(lblPrecioCanguilM)
                         .addGap(18, 18, 18)
                         .addComponent(txtCanguilM, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel27)
+                        .addComponent(lblPrecioNachos)
                         .addGap(18, 18, 18)
                         .addComponent(txtNachos, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel26)
+                        .addComponent(lblPrecioHotDog)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(txtHotDog, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel25)
+                        .addComponent(lblPrecioGaseosa)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(txtGaseosa, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel24)
+                        .addComponent(lblPrecioCanguilG)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(txtCanguilG, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -339,14 +339,14 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel7)
+                .addComponent(lblCombos)
                 .addGap(224, 224, 224))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(4, 4, 4)
-                .addComponent(jLabel7)
+                .addComponent(lblCombos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -358,33 +358,33 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jLabel1)
+                                            .addComponent(lblCanguilM)
                                             .addComponent(txtCanguilM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel28))
+                                            .addComponent(lblPrecioCanguilM))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(txtCanguilG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel2)
-                                            .addComponent(jLabel24))
+                                            .addComponent(lblCanguilG)
+                                            .addComponent(lblPrecioCanguilG))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(jLabel5)
                                             .addComponent(txtGaseosa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel3)
-                                            .addComponent(jLabel25))
+                                            .addComponent(lblGaseosa)
+                                            .addComponent(lblPrecioGaseosa))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jLabel4)
+                                            .addComponent(lblHotDog)
                                             .addComponent(txtHotDog, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel26)))
+                                            .addComponent(lblPrecioHotDog)))
                                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtCombo3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel6)
+                                .addComponent(lblNachos)
                                 .addComponent(txtNachos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel27)
+                                .addComponent(lblPrecioNachos)
                                 .addComponent(txtCombo4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -539,30 +539,59 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
     
        
         try {
-            if(txtCanguilM.getText() != null)
+            if(txtCanguilM.getText().length() != 0){
             valorAlimentos += 3 * Integer.parseInt(txtCanguilM.getText());
-            if(txtCanguilG.getText() != null)
+            }else{
+                txtCanguilM.invalidate();
+            }
+            if(txtCanguilG.getText().length() != 0){
             valorAlimentos += 4 * Integer.parseInt(txtCanguilG.getText());
-            if(txtGaseosa.getText() != null)
+            }else{
+                txtCanguilG.invalidate();
+            }
+            if(txtGaseosa.getText().length() != 0){
             valorAlimentos += 1 * Integer.parseInt(txtGaseosa.getText());
-            if(txtHotDog.getText() != null)
+            }else{
+                txtGaseosa.invalidate();
+            }
+            if(txtHotDog.getText().length() != 0){
             valorAlimentos += 2 * Integer.parseInt(txtHotDog.getText());
-            if(txtNachos.getText() != null)
+            }else{
+                txtHotDog.invalidate();
+            }
+            if(txtNachos.getText().length() != 0){
             valorAlimentos += 2 * Integer.parseInt(txtNachos.getText());
-            if(txtCombo1.getText() != null)
+            }else{
+                txtNachos.invalidate();
+            }
+            if(txtCombo1.getText().length() != 0){
             valorAlimentos += 5 * Integer.parseInt(txtCombo1.getText());
-            if(txtCombo2.getText() != null)
+            }else{
+                txtCombo1.invalidate();
+            }
+            if(txtCombo2.getText().length() != 0){
             valorAlimentos += 6 * Integer.parseInt(txtCombo2.getText());
-            if(txtCombo3.getText() != null)
+            }else{
+                txtCombo2.invalidate();
+            }
+            if(txtCombo3.getText().length() != 0){
             valorAlimentos += 7 * Integer.parseInt(txtCombo3.getText());
-            if(txtCombo4.getText() != null)
+            }else{
+                txtCombo3.invalidate();
+            }
+            if(txtCombo4.getText().length() != 0){
             valorAlimentos += 4 * Integer.parseInt(txtCombo4.getText());
+            }else{
+                txtCombo4.invalidate();
+            }
             
             MenuPrincipal.compras.add(new CompraAfiliada(cmbHorarios.getSelectedIndex(), boletos, valorAlimentos));
+            
             boletos = 0;
             valorAlimentos = 0;
             cmbHorarios.setEnabled(true);
             cmbHorarios.setSelectedIndex(-1);
+            LimpiarGUI();
                     
         }catch(NumberFormatException nfe){
             JOptionPane.showMessageDialog(rootPane, "Debe ingresar números" +
@@ -606,48 +635,62 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
             }
         });
     }
-
+    
+    public void LimpiarGUI(){
+        txtCanguilM.setText("");
+        txtCanguilG.setText("");
+        txtGaseosa.setText("");
+        txtHotDog.setText("");
+        txtNachos.setText("");
+        txtCombo1.setText("");
+        txtCombo2.setText("");
+        txtCombo3.setText("");
+        txtCombo4.setText("");
+        cmbFila.setSelectedIndex(-1);
+        cmbColumna.setSelectedIndex(-1);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEscogerAsientos;
     private javax.swing.JButton btnRegistrarCompra;
     private javax.swing.JComboBox<String> cmbColumna;
     private javax.swing.JComboBox<String> cmbFila;
     private javax.swing.JComboBox<String> cmbHorarios;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblC1CanguilM;
+    private javax.swing.JLabel lblC1Gaseosa;
+    private javax.swing.JLabel lblC1Nachos;
+    private javax.swing.JLabel lblC2CanguilG;
+    private javax.swing.JLabel lblC2Gaseosa;
+    private javax.swing.JLabel lblC2HotDog;
+    private javax.swing.JLabel lblC3CanguilG;
+    private javax.swing.JLabel lblC3HotDog;
+    private javax.swing.JLabel lblC3Nachos;
+    private javax.swing.JLabel lblC4Gaseosa;
+    private javax.swing.JLabel lblC4HotDog;
+    private javax.swing.JLabel lblC4Nachos;
+    private javax.swing.JLabel lblCanguilG;
+    private javax.swing.JLabel lblCanguilM;
+    private javax.swing.JLabel lblCombos;
+    private javax.swing.JLabel lblGaseosa;
     private javax.swing.JLabel lblHorarioFuncion;
+    private javax.swing.JLabel lblHotDog;
+    private javax.swing.JLabel lblNachos;
+    private javax.swing.JLabel lblPrecioCanguilG;
+    private javax.swing.JLabel lblPrecioCanguilM;
+    private javax.swing.JLabel lblPrecioCombo1;
+    private javax.swing.JLabel lblPrecioCombo2;
+    private javax.swing.JLabel lblPrecioCombo3;
+    private javax.swing.JLabel lblPrecioCombo4;
+    private javax.swing.JLabel lblPrecioGaseosa;
+    private javax.swing.JLabel lblPrecioHotDog;
+    private javax.swing.JLabel lblPrecioNachos;
     private javax.swing.JScrollPane tblAsientos;
     private javax.swing.JTable tblAsientosEjecutivos;
     private javax.swing.JTextArea txaInformacionPagos;
