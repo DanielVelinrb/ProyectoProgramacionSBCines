@@ -134,8 +134,8 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblCanguilMediano" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="lblCanguilGrande" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblCanguilM" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblCanguilG" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="lblGaseosa" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="lblHotDog" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="lblNachos" alignment="0" min="-2" max="-2" attributes="0"/>

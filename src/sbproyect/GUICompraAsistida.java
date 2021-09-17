@@ -622,7 +622,21 @@ public class GUICompraAsistida extends javax.swing.JFrame {
             }
         });
     }
-
+    
+    public void LimpiarGUI(){
+        txtCanguilMediano.setText("");
+        txtCanguilGrande.setText("");
+        txtGaseosa.setText("");
+        txtHotDog.setText("");
+        txtNachos.setText("");
+        txtCombo1.setText("");
+        txtCombo2.setText("");
+        txtCombo3.setText("");
+        txtCombo4.setText("");
+        cmbFila.setSelectedIndex(-1);
+        cmbColumna.setSelectedIndex(-1);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEscogerAsiento;
     private javax.swing.JButton btnRegistrarCompra;
