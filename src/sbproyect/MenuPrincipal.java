@@ -1,7 +1,7 @@
 package sbproyect;
 
 import java.awt.Label;
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class MenuPrincipal extends javax.swing.JFrame {
     //VARIABLES AUXILIARES QUE SERVIRAN PARA EL AJUSTO DE LOS ELEMENTOS
@@ -21,7 +21,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     //BORRAR EN PRÓXIMA VERSIONES
     public Prueba p = new Prueba();
     
-    public static ArrayList<Compra> compras;
+    public static LinkedList<Compra> compras;
     
     public MenuPrincipal() {
         initComponents();
@@ -30,7 +30,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         compraAsistida.setVisible(false);
         compraEjecutiva.setVisible(false);
         informacion.setVisible(false);
-        compras = new ArrayList();
+        compras = new LinkedList();
         p.setVisible(false);
         
         for(int i = 0; i < 6; i++){

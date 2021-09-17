@@ -6,7 +6,7 @@ public class Compra {
     protected int horaFuncion;
     protected int numeroBoletos;
     protected double precioFacturado;
-
+   
     public int getPRECIO_BOLETO() {
         return PRECIO_BOLETO;
     }
@@ -17,6 +17,11 @@ public class Compra {
 
     public String getSala() {
         return sala;
+    }
+    
+    @Override
+    public String toString(){
+        return "Su valor a pagar es: " + precioFacturado;
     }
     
 }

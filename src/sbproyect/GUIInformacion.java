@@ -15,14 +15,13 @@ public class GUIInformacion extends javax.swing.JFrame {
 
     public void mostrarInformacion(){
         dtmDatos.setRowCount(0);
-        
         //CONSIDERAR EL DESCUENTO A SER IMPLEMENTADO
         for(Compra c : MenuPrincipal.compras){
             if(c instanceof CompraAfiliada){
-                dtmDatos.addRow(new Object[]{c.getSala(), c.getPrecioFacturado(), ((CompraAfiliada) c).getDescuentoCompra()});
+                dtmDatos.addRow(new Object[]{c.getSala(), "$" + c.getPrecioFacturado(), "$" + ((CompraAfiliada) c).getDescuentoCompra()});
             }
             else{
-                dtmDatos.addRow(new Object[]{c.getSala(), c.getPrecioFacturado()});
+                dtmDatos.addRow(new Object[]{c.getSala(), "$" + c.getPrecioFacturado(), "$" + 0.0});
             }
         }
         

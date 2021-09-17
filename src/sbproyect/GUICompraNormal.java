@@ -17,6 +17,7 @@ public class GUICompraNormal extends javax.swing.JFrame {
         for(int i=0 ; i < SalaNormal.getCOLUMNAS() ; i++){
             datos.addColumn((char)(nombreFila+i));
         }
+        btnEscogerAsiento.setEnabled(false);
         tblAsientosNormal.setModel(datos);
     }
 
@@ -24,7 +25,7 @@ public class GUICompraNormal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnEscogerAsientos = new javax.swing.JButton();
+        btnEscogerAsiento = new javax.swing.JButton();
         cmbFila = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
         lblNumeroSala = new javax.swing.JLabel();
@@ -34,17 +35,17 @@ public class GUICompraNormal extends javax.swing.JFrame {
         btnVerAsientos = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblAsientosNormal = new javax.swing.JTable();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        txaInformacion = new javax.swing.JTextArea();
         cmbColumna = new javax.swing.JComboBox<>();
         btnRegistrarCompra = new javax.swing.JButton();
+        lblFila = new javax.swing.JLabel();
+        lblColumna = new javax.swing.JLabel();
 
         setTitle("COMPRA SALA NORMAL");
 
-        btnEscogerAsientos.setText("Escoger Asientos");
-        btnEscogerAsientos.addActionListener(new java.awt.event.ActionListener() {
+        btnEscogerAsiento.setText("Escoger Asiento");
+        btnEscogerAsiento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEscogerAsientosActionPerformed(evt);
+                btnEscogerAsientoActionPerformed(evt);
             }
         });
 
@@ -118,10 +119,6 @@ public class GUICompraNormal extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblAsientosNormal);
 
-        txaInformacion.setColumns(20);
-        txaInformacion.setRows(5);
-        jScrollPane2.setViewportView(txaInformacion);
-
         cmbColumna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L" }));
         cmbColumna.setSelectedIndex(-1);
 
@@ -132,6 +129,10 @@ public class GUICompraNormal extends javax.swing.JFrame {
             }
         });
 
+        lblFila.setText("Fila:");
+
+        lblColumna.setText("Columna:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -140,50 +141,55 @@ public class GUICompraNormal extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 572, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 27, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(228, 228, 228)
+                .addComponent(btnRegistrarCompra)
+                .addContainerGap(249, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(cmbFila, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(58, 58, 58)
-                .addComponent(cmbColumna, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
-                .addComponent(btnEscogerAsientos)
-                .addGap(93, 93, 93))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(175, 175, 175)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblColumna)
+                        .addGap(25, 25, 25)
+                        .addComponent(cmbColumna, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(228, 228, 228)
-                        .addComponent(btnRegistrarCompra))
+                        .addComponent(lblFila)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cmbFila, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(105, 105, 105)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(9, 9, 9)
+                        .addComponent(btnEscogerAsiento)))
+                .addGap(50, 50, 50))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cmbFila, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEscogerAsientos)
-                    .addComponent(cmbColumna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cmbFila, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblFila))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cmbColumna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblColumna))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnEscogerAsiento)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
                 .addComponent(btnRegistrarCompra)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+                .addGap(29, 29, 29))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnEscogerAsientosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEscogerAsientosActionPerformed
+    private void btnEscogerAsientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEscogerAsientoActionPerformed
         int fila = cmbFila.getSelectedIndex();
         int columna = cmbColumna.getSelectedIndex();
         int sala = cmbNumeroSala.getSelectedIndex();
@@ -210,7 +216,7 @@ public class GUICompraNormal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "ERROR. ASEGURESE DE SELECCIONAR "
                     + "TODOS LOS PARÁMETROS DEL ASIENTO NECESARIO");
         }
-    }//GEN-LAST:event_btnEscogerAsientosActionPerformed
+    }//GEN-LAST:event_btnEscogerAsientoActionPerformed
 
     private void btnVerAsientosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerAsientosActionPerformed
         datos.setRowCount(0);
@@ -225,17 +231,26 @@ public class GUICompraNormal extends javax.swing.JFrame {
             for(int i=0 ; i < SalaNormal.getFILAS() ; i++)
                 datos.addRow(MenuPrincipal.salasNormales[posArray + 2].asientos[i]);
         }
+        btnEscogerAsiento.setEnabled(true);
     }//GEN-LAST:event_btnVerAsientosActionPerformed
 
     private void btnRegistrarCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarCompraActionPerformed
         MenuPrincipal.compras.add(new CompraNormal(cmbHorarios.getSelectedIndex(), boletos));
+        JOptionPane.showMessageDialog(rootPane, MenuPrincipal.compras.getLast().toString());
+        limpiarGUI();
         boletos = 0;
         cmbHorarios.setEnabled(true);
         cmbNumeroSala.setEnabled(true);
-        cmbHorarios.setSelectedIndex(-1);
-        cmbNumeroSala.setSelectedIndex(-1);
+        btnEscogerAsiento.setEnabled(false);
     }//GEN-LAST:event_btnRegistrarCompraActionPerformed
 
+    private void limpiarGUI(){
+        cmbHorarios.setSelectedIndex(-1);
+        cmbNumeroSala.setSelectedIndex(-1);
+        cmbFila.setSelectedIndex(-1);
+        cmbColumna.setSelectedIndex(-1);
+        datos.setRowCount(0);
+    }
     /**
      * @param args the command line arguments
      */
@@ -273,7 +288,7 @@ public class GUICompraNormal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnEscogerAsientos;
+    private javax.swing.JButton btnEscogerAsiento;
     private javax.swing.JButton btnRegistrarCompra;
     private javax.swing.JButton btnVerAsientos;
     private javax.swing.JComboBox<String> cmbColumna;
@@ -282,10 +297,10 @@ public class GUICompraNormal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbNumeroSala;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblColumna;
+    private javax.swing.JLabel lblFila;
     private javax.swing.JLabel lblHorarioFuncion;
     private javax.swing.JLabel lblNumeroSala;
     private javax.swing.JTable tblAsientosNormal;
-    private javax.swing.JTextArea txaInformacion;
     // End of variables declaration//GEN-END:variables
 }

@@ -13,4 +13,9 @@ public class CompraNormal extends Compra{
         }
         this.sala = "Sala Normal";
     }
+    
+    @Override
+    public String toString(){
+        return super.toString() + "\nPrecio de los boletos: " + precioFacturado;
+    }
 }

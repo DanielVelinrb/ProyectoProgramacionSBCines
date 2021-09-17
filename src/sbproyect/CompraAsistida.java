@@ -18,4 +18,10 @@ public class CompraAsistida extends Compra{
        this.precioFacturado += consumoAlimentacion;
        this.sala = "Sala Asistida";
     }
+    
+    @Override
+    public String toString(){
+        return super.toString() + "\nPrecio de los boletos: " + (precioFacturado - consumoAlimentacion) +
+                "\nPrecio alimentos: " + consumoAlimentacion;
+    }
 }

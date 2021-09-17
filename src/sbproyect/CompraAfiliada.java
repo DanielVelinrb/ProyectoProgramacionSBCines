@@ -30,4 +30,9 @@ public class CompraAfiliada extends Compra{
         return descuentoCompra;
     }
     
+    @Override
+    public String toString(){
+        return super.toString() + "\nPrecio de los boletos: " + (precioFacturado - consumoAlimentacion) +
+                "\nPrecio alimentos: " + consumoAlimentacion;
+    }
 }
