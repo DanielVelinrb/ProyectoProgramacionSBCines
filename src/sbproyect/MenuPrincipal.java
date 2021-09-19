@@ -1,7 +1,12 @@
 package sbproyect;
 
 import java.awt.Label;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.util.LinkedList;
+import javax.swing.JOptionPane;
 
 public class MenuPrincipal extends javax.swing.JFrame {
     //VARIABLES AUXILIARES QUE SERVIRAN PARA EL AJUSTO DE LOS ELEMENTOS
@@ -18,8 +23,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     public GUICompraAsistida compraAsistida = new GUICompraAsistida();
     public GUICompraEjecutiva compraEjecutiva = new GUICompraEjecutiva();
     public GUIInformacion informacion = new GUIInformacion();
+    public GUIAfiliacionCliente registroAfiliados = new GUIAfiliacionCliente();
     
     public static LinkedList<Compra> compras;
+    public static LinkedList<Afiliado> afiliados;
     
     public MenuPrincipal() {
         initComponents();
@@ -28,7 +35,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         compraAsistida.setVisible(false);
         compraEjecutiva.setVisible(false);
         informacion.setVisible(false);
+        registroAfiliados.setVisible(false);
         compras = new LinkedList();
+        afiliados = new LinkedList();
+        lecturaArchivoCompras();
+        lecturaAfiliados();
         
         for(int i = 0; i < 6; i++){
             salasNormales[i] = new SalaNormal();
@@ -51,6 +62,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnCompraSalaAsistida = new javax.swing.JButton();
         btnCompraSalaEjecutiva = new javax.swing.JButton();
         btnImprimirInformacion = new javax.swing.JButton();
+        btnAfiliarCliente = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -85,6 +97,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnAfiliarCliente.setText("Afiliar Cliente");
+        btnAfiliarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAfiliarClienteActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -95,15 +114,19 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGap(71, 71, 71)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnImprimirInformacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnCompraSalaAsistida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnCompraSalaAsistida, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                         .addComponent(btnCompraSalaEjecutiva, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(21, 21, 21))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblNombre)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(93, 93, 93)
+                .addComponent(btnImprimirInformacion)
+                .addGap(73, 73, 73)
+                .addComponent(btnAfiliarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,9 +138,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addComponent(btnCompraSalaNormal, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCompraSalaAsistida, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCompraSalaEjecutiva, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
-                .addComponent(btnImprimirInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnImprimirInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAfiliarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29))
         );
 
         pack();
@@ -137,12 +162,84 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void btnImprimirInformacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirInformacionActionPerformed
         informacion.setVisible(true);
-        informacion.mostrarInformacion();
+        informacion.mostrarInformacionCompras();
+        informacion.mostrarInformacionClientes();
     }//GEN-LAST:event_btnImprimirInformacionActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void btnAfiliarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAfiliarClienteActionPerformed
+        registroAfiliados.setVisible(true);
+    }//GEN-LAST:event_btnAfiliarClienteActionPerformed
+
+    private void lecturaArchivoCompras(){
+        ObjectInputStream ois = null;
+        Compra c = null;
+        try{
+            FileInputStream file = new FileInputStream("compras.ser");    
+            ois = new ObjectInputStream(file);
+
+            c = (Compra)ois.readObject();
+            while(c != null){
+                compras.add(c);
+                c = (Compra)ois.readObject();
+            }
+        }
+        catch(FileNotFoundException e){
+            JOptionPane.showMessageDialog(null, "Creación de registro de compras completada.");
+        }
+        catch(IOException ioe){
+            ioe.getStackTrace();
+        }
+        catch(ClassNotFoundException cnfe){
+            JOptionPane.showMessageDialog(null, "Error al realizar el casting.");
+        }
+        finally{
+            try{
+                if(ois != null){
+                   ois.close();
+                }
+            }
+            catch(IOException ioe){
+                ioe.getStackTrace();
+            }
+        }
+    
+    }
+    
+    private void lecturaAfiliados(){
+        ObjectInputStream ois = null;
+        Afiliado a = null;
+        try{
+            FileInputStream file = new FileInputStream("afiliados.ser");    
+            ois = new ObjectInputStream(file);
+
+            a = (Afiliado)ois.readObject();
+            while(a != null){
+                afiliados.add(a);
+                a = (Afiliado)ois.readObject();
+            }
+        }
+        catch(FileNotFoundException e){
+            JOptionPane.showMessageDialog(null, "Creación de registro de afiliados completa.");
+        }
+        catch(IOException ioe){
+            ioe.getStackTrace();
+        }
+        catch(ClassNotFoundException cnfe){
+            JOptionPane.showMessageDialog(null, "Error al realizar el casting.");
+        }
+        finally{
+            try{
+                if(ois != null){
+                   ois.close();
+                }
+            }
+            catch(IOException ioe){
+                ioe.getStackTrace();
+            }
+        }
+    
+    }
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -176,6 +273,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAfiliarCliente;
     private javax.swing.JButton btnCompraSalaAsistida;
     private javax.swing.JButton btnCompraSalaEjecutiva;
     private javax.swing.JButton btnCompraSalaNormal;

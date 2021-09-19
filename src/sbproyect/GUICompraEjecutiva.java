@@ -4,7 +4,8 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class GUICompraEjecutiva extends javax.swing.JFrame {
-
+    
+    private double DESCUENTO_POR_PUNTOS = 0.05;
     DefaultTableModel datos;
     CompraAfiliada compra;
     double valorAlimentos = 0;
@@ -565,16 +566,62 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
             if(txtCombo4.getText().length() != 0)
                 valorAlimentos += 4 * Integer.parseInt(txtCombo4.getText());
             
-            MenuPrincipal.compras.add(new CompraAfiliada(cmbHorarios.getSelectedIndex(), boletos, valorAlimentos));
-            JOptionPane.showMessageDialog(rootPane, MenuPrincipal.compras.getLast().toString());
-            limpiarGUI();
-            boletos = 0;
-            valorAlimentos = 0;
-            cmbHorarios.setEnabled(true);            
+            if(boletos > 0 || valorAlimentos > 0){
+                MenuPrincipal.compras.add(new CompraAfiliada(cmbHorarios.getSelectedIndex(), boletos, valorAlimentos));
+                
+                //DETECTAR SI SE TRATA DE UN CLIENTE AFILIADO
+                int option = JOptionPane.showConfirmDialog(rootPane, "Quiere registrar su compra?(solo clientes afiliados)");
+                int cedula = 0;
+                int index = 0;
+                //SI SE TRATA DE UN CLIENTE AFILIADO SE SOLICITA SU CÉDULA
+                if(option == 0){
+                    cedula = Integer.parseInt(JOptionPane.showInputDialog(rootPane, "Ingrese su número de cédula:"));
+                }
+                //SE VALIDA LA MISMA Y DE SER ENCONTRADA SE OTORGA PUNTOS DE COMPRA
+                int validador = 1;
+                for(int i = 0; i < MenuPrincipal.afiliados.size(); i++){
+                    if(cedula == MenuPrincipal.afiliados.get(i).getCedula()){
+                        MenuPrincipal.afiliados.get(i).setPuntos((int) MenuPrincipal.compras.getLast().getPrecioFacturado());
+                        JOptionPane.showMessageDialog(rootPane, "Ha ganado " + (int)MenuPrincipal.compras.getLast().getPrecioFacturado() + " puntos de descuento por su compra.");
+                        index = i;
+                        validador = 0;
+                        i = MenuPrincipal.afiliados.size();
+                    }
+                    else{
+                        validador = -1;
+                    }
+                }
+                if(validador == -1){
+                    JOptionPane.showMessageDialog(rootPane, "Cliente no encontrado. Descuento no disponible");
+                }
+                //SE LE PREGUNTA AL CLIENTE SI DESEA UTILIZAR SUS PUNTOS DE DESCUENTO EN SU COMPRA
+                if(option == 0){
+                    option = JOptionPane.showConfirmDialog(rootPane, "Desea utilizar sus puntos de descuento?\n(DISPONIBLES :" +  
+                    MenuPrincipal.afiliados.get(index).getPuntos() + ").");
+                    //SI DESEA HACERLO SE LE ES EFECTUADO EL DESCUENTO CORRESPONDIENTE
+                    if(option == 0){
+                        MenuPrincipal.compras.getLast().setPrecioFacturado(MenuPrincipal.afiliados.get(index).getPuntos() * DESCUENTO_POR_PUNTOS);
+                        MenuPrincipal.afiliados.get(index).setPuntos(0);       
+                    }
+                }
+                
+                MenuPrincipal.compras.getLast().escrituraDatos(MenuPrincipal.compras);
+                //DEFINIR FUNCIÓN DE ESCRITURA DE CLIENTES Y LLAMARLA AQUÍ/////////
+                JOptionPane.showMessageDialog(rootPane, MenuPrincipal.compras.getLast().toString());
+                limpiarGUI();
+                boletos = 0;
+                valorAlimentos = 0;
+                cmbHorarios.setEnabled(true);    
+            }
+            else{
+                JOptionPane.showMessageDialog(rootPane, "No se pueden realizar compras por valores de $0","ERROR",JOptionPane.ERROR_MESSAGE);
+            }
+        
                     
         }catch(NumberFormatException nfe){
             JOptionPane.showMessageDialog(rootPane, "Debe ingresar números" +
-                    "en los cuadros de texto","ERROR",JOptionPane.ERROR_MESSAGE);
+                    "en los cuadros de texto y en la validación de su cédula de"
+                    + " ser el caso solicitado.","ERROR",JOptionPane.ERROR_MESSAGE);
         }
        
     }//GEN-LAST:event_btnRegistrarCompraActionPerformed

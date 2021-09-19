@@ -558,17 +558,25 @@ public class GUICompraAsistida extends javax.swing.JFrame {
                 valorAlimentos += 7 * Integer.parseInt(txtCombo3.getText());
             if(txtCombo4.getText().length() != 0)
                 valorAlimentos += 4 * Integer.parseInt(txtCombo4.getText());
-                
-            MenuPrincipal.compras.add(new CompraAsistida(cmbHorarios.getSelectedIndex(), boletos, valorAlimentos));
-            JOptionPane.showMessageDialog(rootPane, MenuPrincipal.compras.getLast().toString());
-            limpiarGUI();
-            boletos = 0;
-            valorAlimentos = 0;
-            cmbHorarios.setEnabled(true);        
+              
+            if(boletos > 0 || valorAlimentos > 0){
+                MenuPrincipal.compras.add(new CompraAsistida(cmbHorarios.getSelectedIndex(), boletos, valorAlimentos));
+                MenuPrincipal.compras.getLast().escrituraDatos(MenuPrincipal.compras);
+                JOptionPane.showMessageDialog(rootPane, MenuPrincipal.compras.getLast().toString());
+                limpiarGUI();
+                boletos = 0;
+                valorAlimentos = 0;
+                cmbHorarios.setEnabled(true);    
+            }
+            else{
+                JOptionPane.showMessageDialog(rootPane, "No se pueden realizar compras por valores de $0","ERROR",JOptionPane.ERROR_MESSAGE);
+            }
+        
+                    
         }catch(NumberFormatException nfe){
             JOptionPane.showMessageDialog(rootPane, "Debe ingresar números" +
                     "en los cuadros de texto","ERROR",JOptionPane.ERROR_MESSAGE);
-            }        
+        }     
     }//GEN-LAST:event_btnRegistrarCompraActionPerformed
 
     private void limpiarGUI(){

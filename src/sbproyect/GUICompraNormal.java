@@ -235,13 +235,19 @@ public class GUICompraNormal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVerAsientosActionPerformed
 
     private void btnRegistrarCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarCompraActionPerformed
-        MenuPrincipal.compras.add(new CompraNormal(cmbHorarios.getSelectedIndex(), boletos));
-        JOptionPane.showMessageDialog(rootPane, MenuPrincipal.compras.getLast().toString());
-        limpiarGUI();
-        boletos = 0;
-        cmbHorarios.setEnabled(true);
-        cmbNumeroSala.setEnabled(true);
-        btnEscogerAsiento.setEnabled(false);
+        if(boletos > 0){
+            MenuPrincipal.compras.add(new CompraNormal(cmbHorarios.getSelectedIndex(), boletos));
+            MenuPrincipal.compras.getLast().escrituraDatos(MenuPrincipal.compras);
+            JOptionPane.showMessageDialog(rootPane, MenuPrincipal.compras.getLast().toString());
+            limpiarGUI();
+            boletos = 0;
+            cmbHorarios.setEnabled(true);
+            cmbNumeroSala.setEnabled(true);
+            btnEscogerAsiento.setEnabled(false);
+        }
+        else{
+            JOptionPane.showMessageDialog(rootPane, "No se pueden realizar compras por valores de $0","ERROR",JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_btnRegistrarCompraActionPerformed
 
     private void limpiarGUI(){
