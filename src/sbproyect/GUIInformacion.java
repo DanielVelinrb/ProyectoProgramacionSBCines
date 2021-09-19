@@ -10,7 +10,7 @@ public class GUIInformacion extends javax.swing.JFrame {
         dtmDatos.addColumn("Sala de la compra");
         dtmDatos.addColumn("Valor Facturado");
         dtmDatos.addColumn("Descuento usado");
-        tblDatos.setModel(dtmDatos);
+        tblDatosCompras.setModel(dtmDatos);
     }
 
     public void mostrarInformacion(){
@@ -32,9 +32,9 @@ public class GUIInformacion extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        tblDatos = new javax.swing.JTable();
+        tblDatosCompras = new javax.swing.JTable();
 
-        tblDatos.setModel(new javax.swing.table.DefaultTableModel(
+        tblDatosCompras.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -45,7 +45,7 @@ public class GUIInformacion extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(tblDatos);
+        jScrollPane1.setViewportView(tblDatosCompras);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -61,7 +61,7 @@ public class GUIInformacion extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
@@ -104,6 +104,6 @@ public class GUIInformacion extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tblDatos;
+    private javax.swing.JTable tblDatosCompras;
     // End of variables declaration//GEN-END:variables
 }

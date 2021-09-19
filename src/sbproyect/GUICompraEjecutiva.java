@@ -27,6 +27,14 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
 
         lblHorarioFuncion = new javax.swing.JLabel();
         cmbHorarios = new javax.swing.JComboBox<>();
+        btnEscogerAsiento = new javax.swing.JButton();
+        cmbFila = new javax.swing.JComboBox<>();
+        cmbColumna = new javax.swing.JComboBox<>();
+        tblAsientos = new javax.swing.JScrollPane();
+        tblAsientosEjecutivos = new javax.swing.JTable();
+        btnRegistrarCompra = new javax.swing.JButton();
+        lblFila = new javax.swing.JLabel();
+        lblColumna = new javax.swing.JLabel();
         pnlAlimentos = new javax.swing.JPanel();
         lblCanguilMediano = new javax.swing.JLabel();
         lblCanguilGrande = new javax.swing.JLabel();
@@ -69,14 +77,6 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
         lblHotDogPrecio = new javax.swing.JLabel();
         lblNachosPrecio = new javax.swing.JLabel();
         lblCanguilMedianoPrecio = new javax.swing.JLabel();
-        btnEscogerAsiento = new javax.swing.JButton();
-        cmbFila = new javax.swing.JComboBox<>();
-        cmbColumna = new javax.swing.JComboBox<>();
-        tblAsientos = new javax.swing.JScrollPane();
-        tblAsientosEjecutivos = new javax.swing.JTable();
-        btnRegistrarCompra = new javax.swing.JButton();
-        lblFila = new javax.swing.JLabel();
-        lblColumna = new javax.swing.JLabel();
 
         setTitle("COMPRA SALA EJECUTIVA");
 
@@ -89,6 +89,43 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
                 cmbHorariosActionPerformed(evt);
             }
         });
+
+        btnEscogerAsiento.setText("Escoger Asiento");
+        btnEscogerAsiento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEscogerAsientoActionPerformed(evt);
+            }
+        });
+
+        cmbFila.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6" }));
+        cmbFila.setSelectedIndex(-1);
+
+        cmbColumna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "D", "E", "F", "G", "H" }));
+        cmbColumna.setSelectedIndex(-1);
+
+        tblAsientosEjecutivos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        tblAsientos.setViewportView(tblAsientosEjecutivos);
+
+        btnRegistrarCompra.setText("Registrar Compra");
+        btnRegistrarCompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarCompraActionPerformed(evt);
+            }
+        });
+
+        lblFila.setText("Fila:");
+
+        lblColumna.setText("Columna:");
 
         pnlAlimentos.setBorder(javax.swing.BorderFactory.createTitledBorder("Alimentos"));
 
@@ -398,53 +435,24 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        btnEscogerAsiento.setText("Escoger Asiento");
-        btnEscogerAsiento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEscogerAsientoActionPerformed(evt);
-            }
-        });
-
-        cmbFila.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6" }));
-        cmbFila.setSelectedIndex(-1);
-
-        cmbColumna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "D", "E", "F", "G", "H" }));
-        cmbColumna.setSelectedIndex(-1);
-
-        tblAsientosEjecutivos.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        tblAsientos.setViewportView(tblAsientosEjecutivos);
-
-        btnRegistrarCompra.setText("Registrar Compra");
-        btnRegistrarCompra.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistrarCompraActionPerformed(evt);
-            }
-        });
-
-        lblFila.setText("Fila:");
-
-        lblColumna.setText("Columna:");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(295, 295, 295)
-                .addComponent(btnRegistrarCompra)
-                .addGap(0, 385, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(295, 295, 295)
+                        .addComponent(btnRegistrarCompra))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(tblAsientos, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(pnlAlimentos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -463,37 +471,35 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
                                 .addComponent(lblColumna)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(cmbColumna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(92, 92, 92)
-                        .addComponent(btnEscogerAsiento))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(pnlAlimentos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(84, 84, 84)
-                        .addComponent(tblAsientos, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(83, 83, 83)
+                        .addComponent(btnEscogerAsiento)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblHorarioFuncion)
-                    .addComponent(cmbHorarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cmbFila, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmbColumna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEscogerAsiento)
-                    .addComponent(lblFila)
-                    .addComponent(lblColumna))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblHorarioFuncion)
+                            .addComponent(cmbHorarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cmbFila, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cmbColumna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblFila)
+                            .addComponent(lblColumna)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(btnEscogerAsiento)))
                 .addGap(18, 18, 18)
                 .addComponent(pnlAlimentos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addComponent(tblAsientos, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnRegistrarCompra)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(31, 31, 31))
         );
 
         pack();
