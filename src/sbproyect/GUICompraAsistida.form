@@ -20,83 +20,25 @@
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
   </AuxValues>
 
-  <Layout>
-    <DimensionLayout dim="0">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="lblHorarioFuncion" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lblFila" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="cmbFila" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="cmbHorarios" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" attributes="0">
-                                      <Component id="lblColumna" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="cmbColumna" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
-                                      <Component id="btnEscogerAsiento" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                          <Component id="pnlAlimentos" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="291" max="-2" attributes="0"/>
-                      <Component id="btnRegistrarCompra" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="567" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace pref="76" max="32767" attributes="0"/>
-          </Group>
-      </Group>
-    </DimensionLayout>
-    <DimensionLayout dim="1">
-      <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="cmbHorarios" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblHorarioFuncion" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnEscogerAsiento" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cmbFila" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblFila" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblColumna" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cmbColumna" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="pnlAlimentos" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="181" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btnRegistrarCompra" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="23" max="32767" attributes="0"/>
-          </Group>
-      </Group>
-    </DimensionLayout>
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+    <Property name="useNullLayout" type="boolean" value="false"/>
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JLabel" name="lblHorarioFuncion">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Century" size="12" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Horario de la funci&#xf3;n"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="20" y="29" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="cmbHorarios">
       <Properties>
@@ -115,24 +57,45 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="137" y="26" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JButton" name="btnEscogerAsiento">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Century" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Escoger Asiento"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEscogerAsientoActionPerformed"/>
       </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="299" y="64" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="110" y="350" width="660" height="186"/>
+        </Constraint>
+      </Constraints>
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
         <Component class="javax.swing.JTable" name="tblAsientosAsistidos">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century" size="11" style="0"/>
+            </Property>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="4" rowCount="4">
                 <Column editable="true" title="Title 1" type="java.lang.Object"/>
@@ -147,11 +110,19 @@
     </Container>
     <Component class="javax.swing.JButton" name="btnRegistrarCompra">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Century" size="12" style="0"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Registrar Compra"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarCompraActionPerformed"/>
       </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="370" y="550" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="cmbFila">
       <Properties>
@@ -173,16 +144,43 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="58" y="65" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblFila">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Century" size="12" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Fila:"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="20" y="68" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JLabel" name="lblColumna">
       <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Century" size="12" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Columna:"/>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="137" y="68" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Component class="javax.swing.JComboBox" name="cmbColumna">
       <Properties>
@@ -205,15 +203,28 @@
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="200" y="65" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
     </Component>
     <Container class="javax.swing.JPanel" name="pnlAlimentos">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="66" red="0" type="rgb"/>
+        </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
             <TitledBorder title="Alimentos"/>
           </Border>
         </Property>
       </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="20" y="105" width="-1" height="-1"/>
+        </Constraint>
+      </Constraints>
 
       <Layout>
         <DimensionLayout dim="0">
@@ -372,21 +383,33 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lblCanguilMediano">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century" size="12" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Canguil Med."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblCanguilGrande">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century" size="12" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Canguil Grande"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblGaseosa">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century" size="12" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Gaseosa"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblHotDog">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century" size="12" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Hot-Dog"/>
           </Properties>
         </Component>
@@ -402,11 +425,17 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lblCombos">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Combos:"/>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century" size="12" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Combos"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JPanel" name="pnlCombo1">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="99" type="rgb"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                 <TitledBorder title="Combo 1"/>
@@ -455,21 +484,33 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="lblCanguilCombo1">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Century" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Canguil Med."/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblGaseosaCombo1">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Century" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Gaseosa"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblNachosCombo1">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Century" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Nachos"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblPrecioCombo1">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Century" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="5$"/>
               </Properties>
             </Component>
@@ -477,6 +518,9 @@
         </Container>
         <Container class="javax.swing.JPanel" name="pnlCombo4">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="99" type="rgb"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                 <TitledBorder title="Combo 4"/>
@@ -520,21 +564,33 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="lblGaseosaCombo4">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Century" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Gaseosa"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblHotDogCombo4">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Century" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hot-Dog"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblNachosCombo4">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Century" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Nachos"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblPrecioCombo4">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Century" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="4$"/>
               </Properties>
             </Component>
@@ -542,6 +598,9 @@
         </Container>
         <Container class="javax.swing.JPanel" name="pnlCombo2">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="99" type="rgb"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                 <TitledBorder title="Combo 2"/>
@@ -592,21 +651,33 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="lblCanguilCombo2">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Century" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Canguil Grande"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblGaseosaCombo2">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Century" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Gaseosa"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblHotDogCombo2">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Century" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hot-Dog"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblPrecioCombo2">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Century" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="6$"/>
               </Properties>
             </Component>
@@ -614,6 +685,9 @@
         </Container>
         <Container class="javax.swing.JPanel" name="pnlCombo3">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="99" type="rgb"/>
+            </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                 <TitledBorder title="Combo 3"/>
@@ -664,21 +738,33 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="lblCanguilCombo3">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Century" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Canguil Grande"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblHotDogCombo3">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Century" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Hot-Dog"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblNachosCombo3">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Century" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Nachos"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblPrecioCombo3">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Century" size="12" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="7$"/>
               </Properties>
             </Component>
@@ -686,6 +772,9 @@
         </Container>
         <Component class="javax.swing.JLabel" name="lblNachos">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century" size="12" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Nachos"/>
           </Properties>
         </Component>
@@ -701,30 +790,63 @@
         </Component>
         <Component class="javax.swing.JLabel" name="lblCanguilGrandePrecio">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century" size="12" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="4$"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblGaseosaPrecio">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century" size="12" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="1$"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblHotDogPrecio">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century" size="12" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="2$"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblNachosPrecio">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century" size="12" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="2$"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="lblCanguilMedianoPrecio">
           <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century" size="12" style="0"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="3$"/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Century" size="12" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Im&#xe1;genes/FondoCompras.jpg"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="0" y="0" width="950" height="660"/>
+        </Constraint>
+      </Constraints>
+    </Component>
   </SubComponents>
 </Form>

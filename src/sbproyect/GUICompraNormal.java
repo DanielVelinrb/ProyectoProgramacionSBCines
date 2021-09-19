@@ -39,21 +39,29 @@ public class GUICompraNormal extends javax.swing.JFrame {
         btnRegistrarCompra = new javax.swing.JButton();
         lblFila = new javax.swing.JLabel();
         lblColumna = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setTitle("COMPRA SALA NORMAL");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnEscogerAsiento.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         btnEscogerAsiento.setText("Escoger Asiento");
         btnEscogerAsiento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEscogerAsientoActionPerformed(evt);
             }
         });
+        getContentPane().add(btnEscogerAsiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 150, -1, -1));
 
         cmbFila.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
         cmbFila.setSelectedIndex(-1);
+        getContentPane().add(cmbFila, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 40, 120, -1));
 
+        pnlDatosSala.setBackground(new java.awt.Color(153, 0, 0));
         pnlDatosSala.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos Sala"));
+        pnlDatosSala.setForeground(new java.awt.Color(102, 0, 51));
 
+        lblNumeroSala.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblNumeroSala.setText("Sala:");
 
         cmbHorarios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mañana: (10 am)", "Tarde: (4 pm)", "Noche: (10 pm)" }));
@@ -62,8 +70,10 @@ public class GUICompraNormal extends javax.swing.JFrame {
         cmbNumeroSala.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2" }));
         cmbNumeroSala.setSelectedIndex(-1);
 
+        lblHorarioFuncion.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblHorarioFuncion.setText("Horario de la función");
 
+        btnVerAsientos.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         btnVerAsientos.setText("Ver Asientos");
         btnVerAsientos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,7 +90,7 @@ public class GUICompraNormal extends javax.swing.JFrame {
                 .addGroup(pnlDatosSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblHorarioFuncion)
                     .addComponent(lblNumeroSala))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(pnlDatosSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(cmbHorarios, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cmbNumeroSala, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -101,11 +111,14 @@ public class GUICompraNormal extends javax.swing.JFrame {
                 .addGroup(pnlDatosSalaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblHorarioFuncion)
                     .addComponent(cmbHorarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addComponent(btnVerAsientos)
                 .addGap(20, 20, 20))
         );
 
+        getContentPane().add(pnlDatosSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(64, 24, 300, 160));
+
+        tblAsientosNormal.setFont(new java.awt.Font("Century", 0, 11)); // NOI18N
         tblAsientosNormal.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -119,72 +132,31 @@ public class GUICompraNormal extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblAsientosNormal);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 220, 572, 200));
+
         cmbColumna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L" }));
         cmbColumna.setSelectedIndex(-1);
+        getContentPane().add(cmbColumna, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 120, -1));
 
+        btnRegistrarCompra.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         btnRegistrarCompra.setText("Registrar Compra");
         btnRegistrarCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarCompraActionPerformed(evt);
             }
         });
+        getContentPane().add(btnRegistrarCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(228, 456, -1, -1));
 
+        lblFila.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblFila.setText("Fila:");
+        getContentPane().add(lblFila, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 40, -1, -1));
 
+        lblColumna.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblColumna.setText("Columna:");
+        getContentPane().add(lblColumna, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 100, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 572, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 27, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(228, 228, 228)
-                .addComponent(btnRegistrarCompra)
-                .addContainerGap(249, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pnlDatosSala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblColumna)
-                        .addGap(25, 25, 25)
-                        .addComponent(cmbColumna, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblFila)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cmbFila, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addComponent(btnEscogerAsiento)))
-                .addGap(50, 50, 50))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlDatosSala, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cmbFila, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblFila))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cmbColumna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblColumna))
-                        .addGap(18, 18, 18)
-                        .addComponent(btnEscogerAsiento)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
-                .addComponent(btnRegistrarCompra)
-                .addGap(29, 29, 29))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/FondoCompras.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -240, 630, 750));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -301,6 +273,7 @@ public class GUICompraNormal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbFila;
     private javax.swing.JComboBox<String> cmbHorarios;
     private javax.swing.JComboBox<String> cmbNumeroSala;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblColumna;
     private javax.swing.JLabel lblFila;

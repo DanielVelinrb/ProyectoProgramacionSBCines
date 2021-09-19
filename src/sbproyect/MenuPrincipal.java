@@ -10,8 +10,8 @@ import javax.swing.JOptionPane;
 
 public class MenuPrincipal extends javax.swing.JFrame {
     //VARIABLES AUXILIARES QUE SERVIRAN PARA EL AJUSTO DE LOS ELEMENTOS
-    private final int WIDTH = 700;
-    private final int HEIGTH = 500;
+    private final int WIDTH = 500;
+    private final int HEIGTH = 600;
     
     //CREACION DE LAS SALAS EN LAS QUE SE REALIZARÁN LAS COMPRAS
     public static SalaNormal salasNormales[] = new SalaNormal[6];
@@ -63,87 +63,84 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnCompraSalaEjecutiva = new javax.swing.JButton();
         btnImprimirInformacion = new javax.swing.JButton();
         btnAfiliarCliente = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblNombre.setFont(new java.awt.Font("Papyrus", 0, 36)); // NOI18N
+        lblNombre.setFont(new java.awt.Font("Century", 0, 48)); // NOI18N
         lblNombre.setText("SB CINES");
+        getContentPane().add(lblNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(187, 35, -1, 95));
 
+        btnCompraSalaNormal.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         btnCompraSalaNormal.setText("Sala Normal");
         btnCompraSalaNormal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCompraSalaNormalActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCompraSalaNormal, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 207, 160, 36));
 
+        btnCompraSalaAsistida.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         btnCompraSalaAsistida.setText("Sala Asistida");
         btnCompraSalaAsistida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCompraSalaAsistidaActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCompraSalaAsistida, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 286, 160, 35));
 
+        btnCompraSalaEjecutiva.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         btnCompraSalaEjecutiva.setText("Sala Ejecutiva");
         btnCompraSalaEjecutiva.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCompraSalaEjecutivaActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCompraSalaEjecutiva, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 360, 160, 37));
 
-        btnImprimirInformacion.setText("Imprimir Información");
+        btnImprimirInformacion.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        btnImprimirInformacion.setText("Imprimir ");
         btnImprimirInformacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnImprimirInformacionActionPerformed(evt);
             }
         });
+        getContentPane().add(btnImprimirInformacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 140, 39));
 
-        btnAfiliarCliente.setText("Afiliar Cliente");
+        btnAfiliarCliente.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        btnAfiliarCliente.setText("Afiliar ");
         btnAfiliarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAfiliarClienteActionPerformed(evt);
             }
         });
+        getContentPane().add(btnAfiliarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, 140, 37));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(btnCompraSalaNormal, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnCompraSalaAsistida, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
-                        .addComponent(btnCompraSalaEjecutiva, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblNombre)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addComponent(btnImprimirInformacion)
-                .addGap(73, 73, 73)
-                .addComponent(btnAfiliarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(lblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCompraSalaNormal, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCompraSalaAsistida, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCompraSalaEjecutiva, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnImprimirInformacion, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnAfiliarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29))
-        );
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Century", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel1.setText("SALAS");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 157, -1, -1));
+
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel2.setFont(new java.awt.Font("Century", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel2.setText("Información:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, -1, -1));
+
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Century", 0, 24)); // NOI18N
+        jLabel3.setText("Cliente:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/FondoMenuPrincipal (1).png"))); // NOI18N
+        jLabel4.setMaximumSize(new java.awt.Dimension(500, 600));
+        jLabel4.setMinimumSize(new java.awt.Dimension(500, 600));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -278,6 +275,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnCompraSalaEjecutiva;
     private javax.swing.JButton btnCompraSalaNormal;
     private javax.swing.JButton btnImprimirInformacion;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lblNombre;
     // End of variables declaration//GEN-END:variables
 }

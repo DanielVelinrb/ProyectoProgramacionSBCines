@@ -50,6 +50,7 @@ public class GUIInformacion extends javax.swing.JFrame {
         tblDatosClientes = new javax.swing.JTable();
         lblRegistroCompras = new javax.swing.JLabel();
         lblRegistroClientes = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -64,6 +65,9 @@ public class GUIInformacion extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTable1);
 
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tblDatosCompras.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         tblDatosCompras.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -77,6 +81,9 @@ public class GUIInformacion extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblDatosCompras);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 37, 311, 408));
+
+        tblDatosClientes.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         tblDatosClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -90,38 +97,20 @@ public class GUIInformacion extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(tblDatosClientes);
 
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 343, 408));
+
+        lblRegistroCompras.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        lblRegistroCompras.setForeground(new java.awt.Color(204, 204, 255));
         lblRegistroCompras.setText("Registro de compras:");
+        getContentPane().add(lblRegistroCompras, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 11, -1, -1));
 
+        lblRegistroClientes.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        lblRegistroClientes.setForeground(new java.awt.Color(204, 204, 255));
         lblRegistroClientes.setText("Registro Clientes:");
+        getContentPane().add(lblRegistroClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 10, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblRegistroCompras))
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblRegistroClientes)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(31, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblRegistroCompras, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblRegistroClientes, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/FondoGUIInformacion.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -540, 700, 1090));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -162,6 +151,7 @@ public class GUIInformacion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;

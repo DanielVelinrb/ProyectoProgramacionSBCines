@@ -77,10 +77,15 @@ public class GUICompraAsistida extends javax.swing.JFrame {
         lblHotDogPrecio = new javax.swing.JLabel();
         lblNachosPrecio = new javax.swing.JLabel();
         lblCanguilMedianoPrecio = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setTitle("COMPRA SALA ASISTIDA");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lblHorarioFuncion.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        lblHorarioFuncion.setForeground(new java.awt.Color(204, 204, 255));
         lblHorarioFuncion.setText("Horario de la función");
+        getContentPane().add(lblHorarioFuncion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 29, -1, -1));
 
         cmbHorarios.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mañana: (10 am)", "Tarde: (4 pm)", "Noche: (10 pm)" }));
         cmbHorarios.setSelectedIndex(-1);
@@ -89,14 +94,18 @@ public class GUICompraAsistida extends javax.swing.JFrame {
                 cmbHorariosActionPerformed(evt);
             }
         });
+        getContentPane().add(cmbHorarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 26, -1, -1));
 
+        btnEscogerAsiento.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         btnEscogerAsiento.setText("Escoger Asiento");
         btnEscogerAsiento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEscogerAsientoActionPerformed(evt);
             }
         });
+        getContentPane().add(btnEscogerAsiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 64, -1, -1));
 
+        tblAsientosAsistidos.setFont(new java.awt.Font("Century", 0, 11)); // NOI18N
         tblAsientosAsistidos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -110,44 +119,67 @@ public class GUICompraAsistida extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblAsientosAsistidos);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 350, 660, 186));
+
+        btnRegistrarCompra.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         btnRegistrarCompra.setText("Registrar Compra");
         btnRegistrarCompra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarCompraActionPerformed(evt);
             }
         });
+        getContentPane().add(btnRegistrarCompra, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 550, -1, -1));
 
         cmbFila.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8" }));
         cmbFila.setSelectedIndex(-1);
         cmbFila.setToolTipText("");
+        getContentPane().add(cmbFila, new org.netbeans.lib.awtextra.AbsoluteConstraints(58, 65, -1, -1));
 
+        lblFila.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        lblFila.setForeground(new java.awt.Color(204, 204, 255));
         lblFila.setText("Fila:");
+        getContentPane().add(lblFila, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 68, -1, -1));
 
+        lblColumna.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        lblColumna.setForeground(new java.awt.Color(204, 204, 255));
         lblColumna.setText("Columna:");
+        getContentPane().add(lblColumna, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 68, -1, -1));
 
         cmbColumna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J" }));
         cmbColumna.setSelectedIndex(-1);
+        getContentPane().add(cmbColumna, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 65, -1, -1));
 
+        pnlAlimentos.setBackground(new java.awt.Color(0, 102, 102));
         pnlAlimentos.setBorder(javax.swing.BorderFactory.createTitledBorder("Alimentos"));
 
+        lblCanguilMediano.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblCanguilMediano.setText("Canguil Med.");
 
+        lblCanguilGrande.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblCanguilGrande.setText("Canguil Grande");
 
+        lblGaseosa.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblGaseosa.setText("Gaseosa");
 
+        lblHotDog.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblHotDog.setText("Hot-Dog");
 
-        lblCombos.setText("Combos:");
+        lblCombos.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        lblCombos.setText("Combos");
 
+        pnlCombo1.setBackground(new java.awt.Color(153, 0, 0));
         pnlCombo1.setBorder(javax.swing.BorderFactory.createTitledBorder("Combo 1"));
 
+        lblCanguilCombo1.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblCanguilCombo1.setText("Canguil Med.");
 
+        lblGaseosaCombo1.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblGaseosaCombo1.setText("Gaseosa");
 
+        lblNachosCombo1.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblNachosCombo1.setText("Nachos");
 
+        lblPrecioCombo1.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblPrecioCombo1.setText("5$");
 
         javax.swing.GroupLayout pnlCombo1Layout = new javax.swing.GroupLayout(pnlCombo1);
@@ -181,14 +213,19 @@ public class GUICompraAsistida extends javax.swing.JFrame {
                 .addGap(0, 11, Short.MAX_VALUE))
         );
 
+        pnlCombo4.setBackground(new java.awt.Color(153, 0, 0));
         pnlCombo4.setBorder(javax.swing.BorderFactory.createTitledBorder("Combo 4"));
 
+        lblGaseosaCombo4.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblGaseosaCombo4.setText("Gaseosa");
 
+        lblHotDogCombo4.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblHotDogCombo4.setText("Hot-Dog");
 
+        lblNachosCombo4.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblNachosCombo4.setText("Nachos");
 
+        lblPrecioCombo4.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblPrecioCombo4.setText("4$");
 
         javax.swing.GroupLayout pnlCombo4Layout = new javax.swing.GroupLayout(pnlCombo4);
@@ -219,14 +256,19 @@ public class GUICompraAsistida extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        pnlCombo2.setBackground(new java.awt.Color(153, 0, 0));
         pnlCombo2.setBorder(javax.swing.BorderFactory.createTitledBorder("Combo 2"));
 
+        lblCanguilCombo2.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblCanguilCombo2.setText("Canguil Grande");
 
+        lblGaseosaCombo2.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblGaseosaCombo2.setText("Gaseosa");
 
+        lblHotDogCombo2.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblHotDogCombo2.setText("Hot-Dog");
 
+        lblPrecioCombo2.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblPrecioCombo2.setText("6$");
 
         javax.swing.GroupLayout pnlCombo2Layout = new javax.swing.GroupLayout(pnlCombo2);
@@ -261,14 +303,19 @@ public class GUICompraAsistida extends javax.swing.JFrame {
                 .addGap(0, 11, Short.MAX_VALUE))
         );
 
+        pnlCombo3.setBackground(new java.awt.Color(153, 0, 0));
         pnlCombo3.setBorder(javax.swing.BorderFactory.createTitledBorder("Combo 3"));
 
+        lblCanguilCombo3.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblCanguilCombo3.setText("Canguil Grande");
 
+        lblHotDogCombo3.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblHotDogCombo3.setText("Hot-Dog");
 
+        lblNachosCombo3.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblNachosCombo3.setText("Nachos");
 
+        lblPrecioCombo3.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblPrecioCombo3.setText("7$");
 
         javax.swing.GroupLayout pnlCombo3Layout = new javax.swing.GroupLayout(pnlCombo3);
@@ -303,16 +350,22 @@ public class GUICompraAsistida extends javax.swing.JFrame {
                 .addGap(0, 11, Short.MAX_VALUE))
         );
 
+        lblNachos.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblNachos.setText("Nachos");
 
+        lblCanguilGrandePrecio.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblCanguilGrandePrecio.setText("4$");
 
+        lblGaseosaPrecio.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblGaseosaPrecio.setText("1$");
 
+        lblHotDogPrecio.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblHotDogPrecio.setText("2$");
 
+        lblNachosPrecio.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblNachosPrecio.setText("2$");
 
+        lblCanguilMedianoPrecio.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         lblCanguilMedianoPrecio.setText("3$");
 
         javax.swing.GroupLayout pnlAlimentosLayout = new javax.swing.GroupLayout(pnlAlimentos);
@@ -436,62 +489,12 @@ public class GUICompraAsistida extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblHorarioFuncion)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(lblFila)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(cmbFila, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cmbHorarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblColumna)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(cmbColumna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(67, 67, 67)
-                                        .addComponent(btnEscogerAsiento))))
-                            .addComponent(pnlAlimentos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(291, 291, 291)
-                        .addComponent(btnRegistrarCompra))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(115, 115, 115)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(76, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cmbHorarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblHorarioFuncion))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEscogerAsiento)
-                    .addComponent(cmbFila, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblFila)
-                    .addComponent(lblColumna)
-                    .addComponent(cmbColumna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(pnlAlimentos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnRegistrarCompra)
-                .addContainerGap(23, Short.MAX_VALUE))
-        );
+        getContentPane().add(pnlAlimentos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 105, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imágenes/FondoCompras.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 660));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -651,6 +654,7 @@ public class GUICompraAsistida extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cmbColumna;
     private javax.swing.JComboBox<String> cmbFila;
     private javax.swing.JComboBox<String> cmbHorarios;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblCanguilCombo1;
