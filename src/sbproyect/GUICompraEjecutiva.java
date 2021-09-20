@@ -1,5 +1,10 @@
 package sbproyect;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.LinkedList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -514,8 +519,8 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
                 cmbHorarios.setEnabled(false);
         }
         catch(ArrayIndexOutOfBoundsException error){
-            JOptionPane.showMessageDialog(rootPane, "ERROR. ASEGURESE DE SELECCIONAR "
-                    + "TODOS LOS PARÁMETROS DEL ASIENTO NECESARIO");
+            JOptionPane.showMessageDialog(rootPane, "ASEGURESE DE SELECCIONAR "
+                    + "TODOS LOS PARÁMETROS DEL ASIENTO NECESARIO", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
         btnEscogerAsiento.setEnabled(true);
     }//GEN-LAST:event_btnEscogerAsientoActionPerformed
@@ -598,6 +603,7 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
                 
                 MenuPrincipal.compras.getLast().escrituraDatos(MenuPrincipal.compras);
                 //DEFINIR FUNCIÓN DE ESCRITURA DE CLIENTES Y LLAMARLA AQUÍ/////////
+                escrituraDatos(MenuPrincipal.afiliados);
                 JOptionPane.showMessageDialog(rootPane, MenuPrincipal.compras.getLast().toString());
                 limpiarGUI();
                 boletos = 0;
@@ -617,6 +623,35 @@ public class GUICompraEjecutiva extends javax.swing.JFrame {
        
     }//GEN-LAST:event_btnRegistrarCompraActionPerformed
 
+     private void escrituraDatos(LinkedList<Afiliado> afiliados){
+        ObjectOutputStream os = null;
+        
+        try{
+            FileOutputStream file = new FileOutputStream("afiliados.ser");    
+            os = new ObjectOutputStream(file);
+            for(Afiliado a : afiliados){
+                os.writeObject(a);
+            }
+        }
+        catch(FileNotFoundException e){
+            JOptionPane.showMessageDialog(rootPane, "Error al crear el archivo", "ERROR", JOptionPane.ERROR_MESSAGE);
+        }
+        catch(IOException ioe){
+            ioe.getStackTrace();
+        }
+        finally{
+            try{
+                os.close();
+            }
+            catch(IOException ioe){
+                ioe.getStackTrace();
+            }
+            catch(NullPointerException npe){
+                JOptionPane.showMessageDialog(rootPane, "Error al cerrar el archivo", "ERROR", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }
+     
     private void limpiarGUI(){
         cmbHorarios.setSelectedIndex(-1);
         cmbFila.setSelectedIndex(-1);

@@ -61,7 +61,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnCompraSalaNormal = new javax.swing.JButton();
         btnCompraSalaAsistida = new javax.swing.JButton();
         btnCompraSalaEjecutiva = new javax.swing.JButton();
-        btnImprimirInformacion = new javax.swing.JButton();
+        btnVisualizarRegistros = new javax.swing.JButton();
         btnAfiliarCliente = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -102,14 +102,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
         getContentPane().add(btnCompraSalaEjecutiva, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 360, 160, 37));
 
-        btnImprimirInformacion.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
-        btnImprimirInformacion.setText("Imprimir ");
-        btnImprimirInformacion.addActionListener(new java.awt.event.ActionListener() {
+        btnVisualizarRegistros.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        btnVisualizarRegistros.setText("Visualizar Registros");
+        btnVisualizarRegistros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnImprimirInformacionActionPerformed(evt);
+                btnVisualizarRegistrosActionPerformed(evt);
             }
         });
-        getContentPane().add(btnImprimirInformacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 140, 39));
+        getContentPane().add(btnVisualizarRegistros, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 140, 39));
 
         btnAfiliarCliente.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
         btnAfiliarCliente.setText("Afiliar ");
@@ -157,11 +157,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         compraEjecutiva.setVisible(true);
     }//GEN-LAST:event_btnCompraSalaEjecutivaActionPerformed
 
-    private void btnImprimirInformacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirInformacionActionPerformed
+    private void btnVisualizarRegistrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVisualizarRegistrosActionPerformed
         informacion.setVisible(true);
         informacion.mostrarInformacionCompras();
         informacion.mostrarInformacionClientes();
-    }//GEN-LAST:event_btnImprimirInformacionActionPerformed
+    }//GEN-LAST:event_btnVisualizarRegistrosActionPerformed
 
     private void btnAfiliarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAfiliarClienteActionPerformed
         registroAfiliados.setVisible(true);
@@ -274,7 +274,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnCompraSalaAsistida;
     private javax.swing.JButton btnCompraSalaEjecutiva;
     private javax.swing.JButton btnCompraSalaNormal;
-    private javax.swing.JButton btnImprimirInformacion;
+    private javax.swing.JButton btnVisualizarRegistros;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

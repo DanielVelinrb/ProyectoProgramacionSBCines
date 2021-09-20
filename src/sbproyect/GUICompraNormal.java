@@ -186,7 +186,7 @@ public class GUICompraNormal extends javax.swing.JFrame {
         }
         catch(ArrayIndexOutOfBoundsException error){
             JOptionPane.showMessageDialog(rootPane, "ERROR. ASEGURESE DE SELECCIONAR "
-                    + "TODOS LOS PARÁMETROS DEL ASIENTO NECESARIO");
+                    + "TODOS LOS PARÁMETROS DEL ASIENTO NECESARIO", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnEscogerAsientoActionPerformed
 

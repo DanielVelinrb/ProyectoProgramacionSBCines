@@ -44,7 +44,8 @@ public class Compra implements Serializable{
             }
         }
         catch(FileNotFoundException e){
-            JOptionPane.showMessageDialog(null, "Error al crear el archivo");
+            JOptionPane.showMessageDialog(null, "Error al crear el archivo",
+                    "ERROR", JOptionPane.ERROR_MESSAGE);
         }
         catch(IOException ioe){
             ioe.getStackTrace();
@@ -57,7 +58,8 @@ public class Compra implements Serializable{
                 ioe.getStackTrace();
             }
             catch(NullPointerException npe){
-                JOptionPane.showMessageDialog(null, "Error al cerrar el archivo");
+                JOptionPane.showMessageDialog(null, "Error al cerrar el archivo",
+                        "ERROR", JOptionPane.ERROR_MESSAGE);
             }
         }
     }

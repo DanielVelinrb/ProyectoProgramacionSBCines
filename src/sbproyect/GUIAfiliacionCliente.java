@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 
 public class GUIAfiliacionCliente extends javax.swing.JFrame {
 
+    int cedula = 0;
     public GUIAfiliacionCliente() {
         initComponents();
     }
@@ -55,27 +56,33 @@ public class GUIAfiliacionCliente extends javax.swing.JFrame {
 
     private void btnAfiliarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAfiliarClienteActionPerformed
         String nombre = txtNombre.getText();
-        int cedula = 0;
+        //int cedula = 0;
         boolean valid = true;
         try{
-            cedula = Integer.parseInt(txtCedula.getText());
-            for(Afiliado a : MenuPrincipal.afiliados){
-                if(a.getCedula() == cedula){
-                    valid = false;
+            //cedula = Integer.parseInt(txtCedula.getText());
+            if(verificarCedula()){
+                for(Afiliado a : MenuPrincipal.afiliados){
+                    if(a.getCedula() == cedula){
+                        valid = false;
+                    }
+                }
+                if(valid){
+                    //SE EMPLEA 0 COMO TERCER PARÁMETRO PARA UNA CORRECTA LECTURA DE DATOS
+                    MenuPrincipal.afiliados.add(new Afiliado(nombre, cedula, 0));
+                    escrituraDatos(MenuPrincipal.afiliados);
+                    JOptionPane.showMessageDialog(rootPane, "Cliente registrado exitosamente.");
+                    //Limpieza de la GUI
+                    txtNombre.setText("");
+                    txtCedula.setText("");
+                }
+                else{
+                    JOptionPane.showMessageDialog(rootPane, "Este cliente ya existe."
+                            + " Registro fallido.","ERROR",JOptionPane.ERROR_MESSAGE);
                 }
             }
-            if(valid){
-                //SE EMPLEA 0 COMO TERCER PARÁMETRO PARA UNA CORRECTA LECTURA DE DATOS
-                MenuPrincipal.afiliados.add(new Afiliado(nombre, cedula, 0));
-                escrituraDatos(MenuPrincipal.afiliados);
-                JOptionPane.showMessageDialog(rootPane, "Cliente registrado exitosamente.");
-                //Limpieza de la GUI
-                txtNombre.setText("");
-                txtCedula.setText("");
-            }
             else{
-                JOptionPane.showMessageDialog(rootPane, "Este cliente ya existe."
-                        + " Registro fallido.","ERROR",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(rootPane, "Cédula inválida, "
+                        + "cliente no afiliado.", "ERROR",JOptionPane.ERROR_MESSAGE);
             }
         }
         catch(NumberFormatException nfe){
@@ -84,7 +91,7 @@ public class GUIAfiliacionCliente extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnAfiliarClienteActionPerformed
 
-     private void escrituraDatos(LinkedList<Afiliado> afiliados){
+    private void escrituraDatos(LinkedList<Afiliado> afiliados){
         ObjectOutputStream os = null;
         
         try{
@@ -95,7 +102,8 @@ public class GUIAfiliacionCliente extends javax.swing.JFrame {
             }
         }
         catch(FileNotFoundException e){
-            JOptionPane.showMessageDialog(null, "Error al crear el archivo");
+            JOptionPane.showMessageDialog(rootPane, "Error al crear el archivo",
+                    "ERROR", JOptionPane.ERROR_MESSAGE);
         }
         catch(IOException ioe){
             ioe.getStackTrace();
@@ -108,12 +116,56 @@ public class GUIAfiliacionCliente extends javax.swing.JFrame {
                 ioe.getStackTrace();
             }
             catch(NullPointerException npe){
-                JOptionPane.showMessageDialog(null, "Error al cerrar el archivo");
+                JOptionPane.showMessageDialog(rootPane, "Error al cerrar el archivo",
+                        "ERROR", JOptionPane.ERROR_MESSAGE);
             }
         }
     }
+    
+    public boolean verificarCedula(){
+        String strCedula = txtCedula.getText();
+        int cedulaLength = strCedula.length();
+        int numVerificador = 0;
+        int digit = 0;
+        if(cedulaLength != 10){
+            cedula = 0;
+            return false;
+        }
+        
+        try{
+            cedula = Integer.parseInt(strCedula);
+        }
+        catch(Exception error){
+            return false;
+        }
 
-     
+        if(digit < 0 || digit > 24){
+            cedula = 0;
+            return false;
+        }           
+        for(int i = 0; i < cedulaLength - 1; i++){ 
+            digit = Integer.parseInt(strCedula.substring(i, i + 1));
+            
+            if(i % 2 == 0){
+                digit *= 2; 
+                if(digit > 9){
+                    digit -= 9;
+                }
+                numVerificador += digit; 
+            }
+            else{
+                numVerificador += digit; 
+            }
+        }
+        digit = Integer.parseInt(strCedula.substring(cedulaLength - 1, cedulaLength));
+        numVerificador = numVerificador % 10;
+        if(numVerificador == digit){
+            return true;
+        }
+        cedula = 0;
+        return false; 
+    }
+   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
